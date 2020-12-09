@@ -1,1 +1,2 @@
-this in 1st 
+# Pokemon Application
+simulasi mvc app
