@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemons</title>
+</head>
+<body>
+  <div>
+    <h5>POKEMON LIST</h5>
+    <a href="/pokemons/add">
+      <button type="submit">Add Pokemon</button>
+    </a>
+  </div>
+  <div>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>HP</th>
+          <th>IsFat</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% data.forEach(el => { %>
+          <tr>
+            <td><%= el.id %> </td>
+            <td>Mr. <%= el.name %> </td>
+            <td><%= el.HP %> </td>
+            <td><%= el.isFat %> </td>
+            <td>
+              <a href="/pokemons/delete/<%= el.id %>">Delete</a>
+            </td>
+          </tr>
+          <% }) %> 
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
